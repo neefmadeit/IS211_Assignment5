@@ -155,7 +155,7 @@ def main(argv: Optional[List[str]] = None) -> None:
     parser = build_arg_parser()
     args = parser.parse_args(argv)
 
-    # Resolve source: prefer positional; fall back to --file
+    # Resolve source
     source = args.source or args.file_opt
     if not source:
         parser.error("missing CSV source. Provide a path/URL as positional arg or use --file.")
